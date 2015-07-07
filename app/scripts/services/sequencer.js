@@ -57,7 +57,7 @@ angular.module('seqcalcApp')
       fibonacci: function (num) {
         var arr = [0, 1];
 
-        for(var i = 0, j = 1, k = 0, x = 0;
+        for(var i = 0, j = 1, x = 0;
           x <= num;
           i = j, j = x)
         {
