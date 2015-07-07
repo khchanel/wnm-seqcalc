@@ -3,10 +3,10 @@
 
   <div>
     <form name="myForm" novalidate>
-      <input name="seqnumber" type="number" min="1" class="form-control" placeholder="Enter a positive number" ng-model="seqnumber" />
+      <input name="seqnumber" type="number" min="1" max="1000" class="form-control" placeholder="Enter a positive number" ng-model="seqnumber" />
       <div id="errormsg" class="animate-show" ng-show="myForm.seqnumber.$invalid">
         <span style="color:red">
-          Invalid data - Positive whole number only.
+          Invalid data - Positive whole number between 1-1000 only.
         </span>
       </div>
     </form>
@@ -15,19 +15,25 @@
 
 <div>
 <p>Show as plain text
-<input type="checkbox" ng-model="plainText" />
+<input type="checkbox" ng-model="isPlainText" />
 </p>
 </div>
 
-<div class="row marketing">
+<div class="row marketing" ng-show="seqnumber >= 1">
   <h4>All numbers</h4>
-  <num-list numbers=allNumbers plain=plainText> </num-list>
+  <num-list numbers=allNumbers plain=isPlainText> </num-list>
 
   <h4>All odd</h4>
+  <num-list numbers=oddNumbers plain=isPlainText> </num-list>
 
   <h4>All even</h4>
+  <num-list numbers=evenNumbers plain=isPlainText> </num-list>
 
   <h4>Exceptions</h4>
+  <num-list numbers=except plain=isPlainText> </num-list>
+
 
   <h4>Fibonacci</h4>
+  <num-list numbers=fibonacciNumbers plain=isPlainText> </num-list>
+
 </div>

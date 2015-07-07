@@ -4,6 +4,6 @@
   </div>
 
   <div ng-hide="plain">
-  <button style="margin:5px" class="btn btn-info" ng-repeat="num in numbers">{{num}}</button>
+  <button style="margin:5px" class="btn btn-info" ng-repeat="num in numbers track by $index">{{num}}</button>
   </div>
 </div>

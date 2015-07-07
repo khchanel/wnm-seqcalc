@@ -8,8 +8,15 @@
  * Controller of the seqcalcApp
  */
 angular.module('seqcalcApp')
-  .controller('MainCtrl', ['$scope', function ($scope) {
+  .controller('MainCtrl', ['$scope', 'Sequencer', function ($scope, Sequencer) {
     $scope.seqnumber = null;
-    $scope.allNumbers = [1,2,3,4,5];
-    $scope.plainText = false;
+    $scope.isPlainText = false;
+
+    $scope.$watch('seqnumber', function() {
+      $scope.allNumbers = Sequencer.all($scope.seqnumber);
+      $scope.oddNumbers = Sequencer.odd($scope.seqnumber);
+      $scope.evenNumbers = Sequencer.even($scope.seqnumber);
+      $scope.except = Sequencer.except($scope.seqnumber);
+      $scope.fibonacciNumbers = Sequencer.fibonacci($scope.seqnumber);
+    });
   }]);
