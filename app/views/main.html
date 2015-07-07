@@ -13,9 +13,15 @@
   </div>
 </div>
 
+<div>
+<p>Show as plain text
+<input type="checkbox" ng-model="plainText" />
+</p>
+</div>
 
 <div class="row marketing">
   <h4>All numbers</h4>
+  <num-list numbers=allNumbers plain=plainText> </num-list>
 
   <h4>All odd</h4>
 
