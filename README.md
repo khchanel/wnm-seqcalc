@@ -1,4 +1,4 @@
-# wnm-seqcalc
+wnm-seqcalc
 =======
 
 [![Build Status](https://travis-ci.org/khchanel/wnm-seqcalc.svg?branch=master)](https://travis-ci.org/khchanel/wnm-seqcalc)
