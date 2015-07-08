@@ -28,12 +28,14 @@
     "jshint-stylish": "^1.0.0",
     "karma-jasmine": "*",
     "karma-phantomjs-launcher": "*",
+    "protractor": "2.0.0",
     "time-grunt": "^1.0.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
+    "install": "node ./node_modules/protractor/bin/webdriver-manager update",
     "test": "grunt test"
   }
 }
