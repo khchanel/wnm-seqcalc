@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <p>Enter a postive whole number to compute difference number sequences. e.g. enter  number between 1 - 1000</p>
+  <p>Enter a postive whole number to compute different number sequences. e.g. enter  number between 1 - 1000</p>
   <div>
     <form name="myForm" novalidate>
       <input name="seqnumber" type="number" min="1" class="form-control" placeholder="Enter a positive number" ng-model="seqnumber" />
@@ -9,8 +9,8 @@
         </span>
       </div>
 
-      <label>Show as plain text (copypaste-friendly)</label>
-      <input type="checkbox" ng-model="isPlainText" />
+      <label for="plaintext-check">Show as plain text (copypaste-friendly)</label>
+      <input id="plaintext-check" type="checkbox" ng-model="isPlainText" />
       </p>
     </form>
   </div>
