@@ -1,46 +1,33 @@
 <div class="jumbotron">
-  <p>Enter a postive whole number to compute difference number sequences. e.g. enter  number between 1 - 1000</p>
+  <p id="help">Enter a postive whole number to compute different number sequences. e.g. enter  number between 1 - 1000</p>
   <div>
     <form name="myForm" novalidate>
       <input name="seqnumber" type="number" min="1" class="form-control" placeholder="Enter a positive number" ng-model="seqnumber" />
       <div id="errormsg" class="animate-show" ng-show="myForm.seqnumber.$invalid">
         <span style="color:red">
-          Invalid data - Positive whole number only.
+        Invalid data - Positive whole number only.
         </span>
       </div>
-
-      <label>Show as plain text (copypaste-friendly)</label>
-      <input type="checkbox" ng-model="isPlainText" />
+      <label for="plaintext-check">Show as plain text (copypaste-friendly)</label>
+      <input id="plaintext-check" type="checkbox" ng-model="isPlainText" />
       </p>
     </form>
   </div>
-
 </div>
-
 <div>
-
-
-<p>
-Note: <br/>
-* There is a deliberate 200ms delay between input and execution to avoid screen constantly updating
-
+  <p>
+  Note: <br/>
+  * There is a deliberate 200ms delay between input and execution to avoid screen constantly updating
 </div>
-
 <div class="row marketing" ng-show="seqnumber >= 1">
   <h4>All numbers</h4>
   <num-list numbers=allNumbers plain=isPlainText> </num-list>
-
   <h4>All odd</h4>
   <num-list numbers=oddNumbers plain=isPlainText> </num-list>
-
   <h4>All even</h4>
   <num-list numbers=evenNumbers plain=isPlainText> </num-list>
-
   <h4>Exceptions</h4>
   <num-list numbers=except plain=isPlainText> </num-list>
-
-
   <h4>Fibonacci</h4>
   <num-list numbers=fibonacciNumbers plain=isPlainText> </num-list>
-
 </div>
