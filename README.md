@@ -44,6 +44,8 @@ grunt test
 1. Start the Selenium server:
 ./node_modules/.bin/webdriver-manager start
 
-2. Open a new terminal and run Protractor:
+2. Open a new terminal and Run the application (see above)
+
+3. Open a new terminal and run Protractor:
 ./node_modules/.bin/protractor protractor.conf.js
 ```
