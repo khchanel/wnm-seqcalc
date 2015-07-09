@@ -37,10 +37,9 @@ describe('Service: Sequencer', function () {
   });
 
   it('should sequence execption number', function () {
-    expect(angular.equals(sequencer.except(6), ['C'])).toBe(true);
-    expect(angular.equals(sequencer.except(10), ['E'])).toBe(true);
-    expect(angular.equals(sequencer.except(15), ['Z'])).toBe(true);
-    expect(angular.equals(sequencer.except(8), [])).toBe(true);
+    var x = sequencer.except(16);
+    var exp = [1,2,'C',4,'E','C',7,8,'C','E',11,'C',13,14,'Z',16];
+    expect(angular.equals(x, exp)).toBe(true);
   });
 
   it('should sequence fibonacci sequence', function () {

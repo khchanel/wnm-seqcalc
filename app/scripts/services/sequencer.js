@@ -36,22 +36,29 @@ angular.module('seqcalcApp')
       },
 
       except: function (num) {
-        // multiple of both 3 & 5 then Z
-        if (num % 3 === 0 && num % 5 === 0) {
-          return ['Z'];
-        }
+        var arr = this.all(num);
 
-        // multiple of 3 then C
-        if (num % 3 === 0) {
-          return ['C'];
-        }
+        arr = arr.map(function(i, x) {
+           // multiple of both 3 & 5 then Z
+          if (i % 3 === 0 && i % 5 === 0) {
+            return 'Z';
+          }
 
-        // multiple of 5 then E
-        if (num % 5 === 0) {
-          return ['E'];
-        }
+          // multiple of 3 then C
+          if (i % 3 === 0) {
+            return 'C';
+          }
 
-        return [];
+          // multiple of 5 then E
+          if (i % 5 === 0) {
+            return 'E';
+          }
+
+          return i;
+        });
+
+
+        return arr;
       },
 
       fibonacci: function (num) {
