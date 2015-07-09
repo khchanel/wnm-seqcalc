@@ -1,6 +1,6 @@
 <div>
   <div ng-show="plain">
-    <p>{{numbers}}</p>
+    <p style="word-wrap: break-word;">{{numbers}}</p>
   </div>
   <div ng-hide="plain">
     <button style="margin:5px" class="btn btn-info" ng-repeat="num in numbers track by $index">{{num}}</button>
