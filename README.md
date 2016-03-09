@@ -11,7 +11,7 @@ The solution is implemented as a standalone Single Page Application (SPA)
 The app is built around Javascript AngularJS, Bootstrap, HTML5 and CSS3.
 With the use of nodejs-powered frontend tools such as grunt, bower, yeoman generators
 
-Hosted Demo: http://castor.khchanel.com/~nelson/wnm-seqcalc
+Hosted Demo: http://khchanel.com/apps/wnm-seqcalc
 
 
 ## Development setup
